@@ -20,7 +20,6 @@ export default function useMovies() {
           const data = await res.json();
           if (data.Response === "False") throw new Error("Movie Not Found");
           setMovies(data.Search);
-          console.log(data);
           setError("");
         } catch (err) {
           if (err.name !== "AbortError") {

@@ -152,11 +152,10 @@ function MovieSelect({
       setLoading(true);
       async function getMovieDetails() {
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${Key}&i=${selectId}`
+          `https://www.omdbapi.com/?apikey=${Key}&i=${selectId}`
         );
         const data = await res.json();
         setDetails(data);
-        console.log(data);
         setLoading(false);
       }
       getMovieDetails();
