@@ -13,7 +13,7 @@ export default function useMovies() {
           setError("");
           setLoading(true);
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${Key}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${Key}&s=${query}`,
             { signal: contorller.signal }
           );
           if (!res.ok) throw new Error("Something Wrong");
